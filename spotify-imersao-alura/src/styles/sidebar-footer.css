@@ -1,5 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
+    font-family: var(--font-dm-sans);
 }
 
 .sidebar {
@@ -11,17 +12,26 @@ body {
     width: 300px;
 }
 
+.sidebar_navigation .fa {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.sidebar :hover{
+    color: #fff;
+}
+
 .sidebar_navigation {
     background-color: #121212;
     border-radius: 8px;
 }
+
 
 .sidebar_navigation .logo {
     background: #121212;
     display: flex;
     border-radius: 8px;
     padding: 16px 0 0 16px;
-
 }
 
 .sidebar_navigation .logo img{
@@ -31,7 +41,6 @@ body {
 
 .sidebar nav ul {
     padding: 0 20px 10px 20px;
-    
 }
 
 .sidebar ul li {
@@ -43,14 +52,6 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
-
-}
-
-.sidebar nav ul li .fa{
-    color: #b3b3b3;
-    font-size: 20px;
-    padding-right: 10px;
 }
 
 .biblioteca {
@@ -58,7 +59,6 @@ body {
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    min-block-size: 40px;
     padding: 4px 8px;
     color: #b3b3b3;
     font-weight: 600;
@@ -96,6 +96,11 @@ body {
     color: #b3b3b3;
 }
 
+.biblioteca .fa-plus:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
 .section-playlist {
     background-color: #242424;
     border-radius: 8px;
@@ -110,7 +115,6 @@ body {
 .section-playlist__content {
     display: flex;
     flex-direction: column;
-    font-family: "DM Sans", sans-serif;
 }
 
 .section-playlist__content .title{
@@ -137,10 +141,20 @@ body {
     justify-content: center;
     margin-top: 12px;
     background-color: #fff;
+
+}
+
+.section-playlist__content .playlist__button:hover {
+    transform: scale(1.09);
+    color: #121212;
 }
 
 .sidebar .cookies {
     margin: 26px 0;
+}
+
+.sidebar .cookies:hover {
+    text-decoration: underline;
 }
 
 .cookies a{
@@ -154,13 +168,55 @@ body {
 
 .sidebar .idioma_botao {
     background-color: transparent;
-    border-radius: 9999px;
+    border-radius: 20px;
     border: 1px solid #878787;
     color: #fff;
     cursor: pointer;
     align-items: center;
     padding: 8px;
     width: 170px;
-    margin: 6px 8px;
+    margin: 6px 0 8px 8px;
     font-weight: bold;
+}
+
+.sidebar .idioma_botao:hover {
+    border: 1px solid #fff;
+    transform: scale(1.06);
+}
+
+.premium {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: #878787;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    display: flex;
+    padding: 15px 40px;
+    justify-content: space-between;
+}
+
+.premium .premium__text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.premium .premium__text .premium__title {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.premium .premium__text .premium__subtitle {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.premium__button {
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 200px;
 }
