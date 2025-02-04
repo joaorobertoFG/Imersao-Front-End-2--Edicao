@@ -1,6 +1,6 @@
+const searchInput = document.getElementById("search-input");
 const resultArtist = document.getElementById("result-artist");
 const playlistContainer = document.getElementById("result-playlists");
-const searchInput = document.getElementById("search-input");
 
 function requestApi(searchTerm) {
   fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
